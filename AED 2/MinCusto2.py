@@ -13,21 +13,20 @@ def paid_staircase(n, p):
     
     path = []
     curr = n
-    while curr >= 0:
+    while curr > 0:
         path.append(curr)
-        if curr == 0:
-            break
         curr = from_step[curr]
     
+    path.append(0)
+    
     return path[::-1]
-
 
 # Test case 1: Basic test case
 n1 = 5
 p1 = [0, 1, 2, 3, 4, 5]
 result1 = paid_staircase(n1, p1)
-# The cheapest path should be [0, 2, 4, 5]
-print(result1)  # Output: [0, 2, 4, 5]
+# The cheapest path should be [0, 1, 3, 5]
+print(result1)  # Output: [0, 1, 3, 5]
 
 # Test case 2: Edge case with only one step
 n2 = 1
@@ -40,5 +39,5 @@ print(result2)  # Output: [0, 1]
 n3 = 6
 p3 = [0, 2, 3, 4, 5, 6, 7]
 result3 = paid_staircase(n3, p3)
-# The cheapest path should be [0, 2, 3, 4, 5, 6]
-print(result3)  # Output: [0, 2, 3, 4, 5, 6]
+# The cheapest path should be [0, 2, 4, 6]
+print(result3)  # Output: [0, 2, 4, 6]
