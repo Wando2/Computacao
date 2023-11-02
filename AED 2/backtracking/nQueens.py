@@ -1,5 +1,5 @@
 class Solution:
-    def solveNQueens(self, n: int) -> List[List[str]]:
+    def solveNQueens(self, n: int):
         res = []
         col = set()
         negDiag = set()
