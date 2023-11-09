@@ -50,6 +50,7 @@ def combinacao(arr):
     return res        
 
 arr = [1,2,3]
-print(combinacao(arr))
+print(arranjo(arr,2))
+print(permutacaoCircular(arr))
 
 
