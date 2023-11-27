@@ -18,3 +18,21 @@ def Subsets(nums):
 
 test = Subsets([1,2,3])
 print(test)
+
+
+def SubsetsAlt(nums):
+    res = []
+    subset = []
+    
+    def dfs(index):
+        res.append(subset[:])
+        
+        for i in range(index,len(nums)):
+            subset.append(nums[i])
+            dfs(i+1)
+            subset.pop()
+    dfs(0)
+    return res
+
+test2 = SubsetsAlt([1,2,3])
+print(test2)
