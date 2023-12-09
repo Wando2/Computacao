@@ -35,4 +35,4 @@ def SubsetsAlt(nums):
     return res
 
 test2 = SubsetsAlt([1,2,3])
-print(test2)
+
